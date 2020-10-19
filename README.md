@@ -12,7 +12,8 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 - Lastly, we will set up monitoring that alerts us when the incoming data distribution changes.
 
 
-Final project 
+## Train MLP and CNN
+- `scripts/train_character_predictor.sh`
 
 ## Schedule for the November 2019 Bootcamp
 
