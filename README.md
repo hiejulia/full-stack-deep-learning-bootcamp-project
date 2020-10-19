@@ -3,7 +3,7 @@
 Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp](https://fullstackdeeplearning.com).
 
 
-- We will build a handwriting recognition system from scratch, and deploy it as a web service.
+- Handwriting recognition system from scratch, and deploy it as a web service.
 - Uses Keras, but designed to be modular, hackable, and scalable
 - Provides code for training models in parallel and store evaluation in Weights & Biases
 - We will set up continuous integration system for our codebase, which will check functionality of code and evaluate the model about to be deployed.
@@ -13,13 +13,22 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 
 
 ## Train MLP and CNN
-- `scripts/train_character_predictor.sh`
+```sh
+training/run_experiment.py --save \
+  '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "mlp",  "train_args": {"batch_size": 256}}'
+```
+Larger MLP, with a smaller batch size:
+```sh
+training/run_experiment.py \
+  '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "mlp", "network_args": {"num_layers": 8}, "train_args": {"batch_size": 128}}'
+```
+## Run test
+- `pytest -s text_recognizer/tests/test_character_predictor.py`
 
 ## Schedule for the November 2019 Bootcamp
 
 - First session (90 min)
-  - [Setup](setup.md) (10 min): Get set up with jupyterhub.
-  - Introduction to problem and [project structure](project_structure.md) (20 min).
+  - [Setup]Set up with jupyterhub.
   - Gather handwriting data (10 min).
   - [Lab 1](lab1.md) (20 min): Introduce EMNIST. Training code details. Train & evaluate character prediction baselines.
   - [Lab 2](lab2.md) (30 min): Introduce EMNIST Lines. Overview of CTC loss and model architecture. Train our model on EMNIST Lines.
