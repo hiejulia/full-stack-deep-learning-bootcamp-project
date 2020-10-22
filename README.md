@@ -13,10 +13,9 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 
 ## ML model train documentation
 - Started with base model MLP/CNN 
+- Run LeNet model on subsampling dataset
 - 
 
-## Run test
-- `pytest -s text_recognizer/tests/test_character_predictor.py`
 
 ## Schedule for the November 2019 Bootcamp
 

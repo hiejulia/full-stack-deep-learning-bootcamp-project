@@ -10,3 +10,11 @@ To run Jupyter notebook with conda env kernel
 
 # GCP AI Platform Notebooks instance
 
+
+
+
+
+
+## Run test
+- `pytest -s text_recognizer/tests/test_character_predictor.py`
+- `pytest -s text_recognizer`

@@ -56,9 +56,19 @@
 
 
 
-# Lab 3
+# Lab 3: Use sequence model for line text recognition
 - Model, network, and loss
 - Train an LSTM on EMNIST
+    - `networks/line_lstm_ctc.py`
+    - `models/line_model_ctc.py`
+
+- Train LSTM with CTC loss 
+    - Run : python training/run_experiment.py --save '{"train_args": {"epochs": 16}, "dataset": "EmnistLinesDataset", "model": "LineModelCtc", "network": "line_lstm_ctc"}'
+
+
+# !!!! TODO in Lab3
+- Code Encoder - Decoder architecture with attention 
+
 
 # Lab 4
 - Introduce IAM handwriting dataset
