@@ -11,17 +11,10 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 - We will deploy the prediction system as a serverless function to Amazon Lambda.
 - Lastly, we will set up monitoring that alerts us when the incoming data distribution changes.
 
+## ML model train documentation
+- Started with base model MLP/CNN 
+- 
 
-## Train MLP and CNN
-```sh
-training/run_experiment.py --save \
-  '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "mlp",  "train_args": {"batch_size": 256}}'
-```
-Larger MLP, with a smaller batch size:
-```sh
-training/run_experiment.py \
-  '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "mlp", "network_args": {"num_layers": 8}, "train_args": {"batch_size": 128}}'
-```
 ## Run test
 - `pytest -s text_recognizer/tests/test_character_predictor.py`
 
