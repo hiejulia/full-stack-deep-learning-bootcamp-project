@@ -24,10 +24,37 @@
     - `pytest -s text_recognizer/tests/test_character_predictor.py`
 
 # Lab 2
+- Moving from reading single character to reading lines 
 
 - Simple convolutional network to recognize EMNIST characters.
 - Construct a synthetic dataset of EMNIST lines.
 - Move from reading single characters to reading lines.
+
+- Train single epoch (for experiment) 
+    - training/run_experiment.py '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "lenet", "train_args": {"epochs": 1}}'
+
+- Subsampling data 
+    - `subsample_fraction=0.1`
+    - Run : training/run_experiment.py '{"dataset": "EmnistDataset", "dataset_args": {"subsample_fraction": 0.25}, "model": "CharacterModel", "network": "lenet"}'
+
+- Making synthetic dataset of Emnist lines 
+    - Sample sentences from Brown corpus
+    - For each character, sample random EMNIST character and place on a line (with some random overlap)
+    `notebooks/02-look-at-emnist-lines.ipynb`
+
+- Reading multiple character at once 
+    - Train CNN 
+    - Use LeNet network -> applied to each character in sequence 
+        - use `TimeDistributed` layer
+        - express same network using all conv layers 
+    - `notebooks/02b-cnn-for-simple-emnist-lines.ipynb`
+
+
+
+    - Run: python training/run_experiment.py --save '{"train_args": {"epochs": 5}, "dataset": "EmnistLinesDataset", "dataset_args": {"max_length": 8, "max_overlap": 0}, "model": "LineModel", "network": "line_cnn_all_conv"}'
+
+
+
 
 # Lab 3
 - Model, network, and loss
