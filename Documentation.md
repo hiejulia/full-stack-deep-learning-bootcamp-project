@@ -70,15 +70,57 @@
 - Code Encoder - Decoder architecture with attention 
 
 
-# Lab 4
-- Introduce IAM handwriting dataset
+# Lab 4: Train on real handwriting dataset and experiment W&B
+- Introduce IAM handwriting dataset(lines dataset)
+    - `notebooks/03-look-at-iam-lines.ipynb`
 - Introduction to Weights & Biases
 - Running multiple experiments in parallel
 - Automate trials with hyper-parameter sweeps
 - Try some ideas & review results on W&B
 
 
-# Lab 5
+- Train LSTM w CTC model Line predictor on IAM 
+    - 40 epochs get accuracy = 60%
+
+    - Run : python training/run_experiment.py --save '{"dataset": "IamLinesDataset", "model": "LineModelCtc", "network": "line_lstm_ctc"}'
+
+- Use Weight and Bias experiment tracking tool 
+    - Run : `wandb init`
+    ```
+? Which team should we use? (Use arrow keys)
+> your_username
+Manual Entry
+```
+
+Select your username.
+
+```
+Which project should we use?
+> Create New
+```
+
+Select `fsdl-text-recognizer-project`.
+
+How to implement W&B in training code?
+
+Look at `training/run_experiment.py` and `training/util.py`
+```
+
+- Run 1st W&B experiment 
+    - `tasks/train_character_predictor.sh`
+    
+wandb: Tracking run with wandb version 0.8.15
+wandb: Run data is saved locally in wandb/run-20191116_020355-1n7aaz5g
+wandb: Syncing run flowing-waterfall-1
+
+- Run multiple experiment 
+- Automatically run multiple experiments
+- Config sweeps 
+
+
+
+# Lab 5: Line Predictor : Detect line regions in an image of a whole param of text 
+
 - Training data augmentation
 - Ensemble 2 models 
 
@@ -91,12 +133,21 @@
 
 # Lab 7: Test & CI/ CD
 - Test
+
 - Py lint
+
 - CircleCI set up
+
+    
 
 
 # Lab 8: Deployment
 
 - Run LinePredictor as a web app, and send it some requests
 - Dockerize
-- Deploy app to production 
+- Deploy ML model to production 
+
+
+- Run 
+    - python api/app.py
+

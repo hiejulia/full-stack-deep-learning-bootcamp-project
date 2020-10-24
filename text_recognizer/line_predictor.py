@@ -1,17 +1,18 @@
-"""CharacterPredictor class"""
+"""LinePredictor class"""
 from typing import Tuple, Union
 
 import numpy as np
 
-from text_recognizer.models import CharacterModel
+from text_recognizer.models import LineModelCtc
+from text_recognizer.datasets import EmnistLinesDataset
 import text_recognizer.util as util
 
 
-class CharacterPredictor:
-    """Given an image of a single handwritten character, recognizes it."""
+class LinePredictor:
+    """Given an image of a line of handwritten text, recognizes text contents."""
 
-    def __init__(self):
-        self.model = CharacterModel()
+    def __init__(self, dataset_cls=EmnistLinesDataset):
+        self.model = LineModelCtc(dataset_cls=dataset_cls)
         self.model.load_weights()
 
     def predict(self, image_or_filename: Union[np.ndarray, str]) -> Tuple[str, float]:

@@ -14,7 +14,16 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 ## ML model train documentation
 - Started with base model MLP/CNN 
 - Run LeNet model on subsampling dataset
-- 
+- Train CNN for reading lines
+- Train LSTM on Emnist 
+- TODO : Train Encoder - Decoder architecture with attention 
+- Download IAM handwriting dataset
+- Use weight and bias for metrics 
+- Run multiple experiments in parallel with hyper param sweeps 
+- Train data augmentation 
+- Ensemble 2 models
+- Test 
+- Deploy model 
 
 
 ## Schedule for the November 2019 Bootcamp
