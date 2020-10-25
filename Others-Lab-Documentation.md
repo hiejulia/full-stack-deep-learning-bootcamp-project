@@ -3,3 +3,16 @@ Given the output of the model, we can find line regions with an easy image proce
 
 
 
+# Lab 4
+### Automatically running multiple experiments
+
+
+### Config sweeps 
+
+
+
+### Stop sweeps 
+
+
+### TODO 
+- 

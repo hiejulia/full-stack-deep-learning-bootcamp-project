@@ -18,12 +18,16 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 - Train LSTM on Emnist 
 - TODO : Train Encoder - Decoder architecture with attention 
 - Download IAM handwriting dataset
-- Use weight and bias for metrics 
+- Use weight and bias for metrics
 - Run multiple experiments in parallel with hyper param sweeps 
 - Train data augmentation 
 - Ensemble 2 models
 - Test 
 - Deploy model 
+
+## My weight & bias metrics 
+- `https://wandb.ai/fsdl/fsdl-text-recognizer-nov2019?workspace=user-hiennguyen`
+
 
 
 ## Schedule for the November 2019 Bootcamp

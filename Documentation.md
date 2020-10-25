@@ -86,25 +86,13 @@
 
 - Use Weight and Bias experiment tracking tool 
     - Run : `wandb init`
-    ```
-? Which team should we use? (Use arrow keys)
-> your_username
-Manual Entry
-```
-
-Select your username.
-
-```
-Which project should we use?
-> Create New
-```
-
-Select `fsdl-text-recognizer-project`.
+    
+Goto : https://app.wandb.ai/<USERNAME>/fsdl-text-recognizer-project
 
 How to implement W&B in training code?
 
 Look at `training/run_experiment.py` and `training/util.py`
-```
+
 
 - Run 1st W&B experiment 
     - `tasks/train_character_predictor.sh`
