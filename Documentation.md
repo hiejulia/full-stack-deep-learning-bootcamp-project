@@ -84,6 +84,24 @@
 
     - Run : python training/run_experiment.py --save '{"dataset": "IamLinesDataset", "model": "LineModelCtc", "network": "line_lstm_ctc"}'
 
+
+`training/prepare_experiments.py`
+`training/gpu_manager.py`
+
+- Run : `training/prepare_experiments.py training/experiments/sample.json`
+
+
+```
+python training/run_experiment.py --gpu=-1 '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "mlp", "network_args": {"num_layers": 2}, "train_args": {"batch_size": 256}, "experiment_group": "Sample Experiments 2"}'
+python training/run_experiment.py --gpu=-1 '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "mlp", "network_args": {"num_layers": 4}, "train_args": {"batch_size": 256}, "experiment_group": "Sample Experiments 2"}'
+python training/run_experiment.py --gpu=-1 '{"dataset": "EmnistDataset", "model": "CharacterModel", "network": "lenet", "train_args": {"batch_size": 256}, "experiment_group": "Sample Experiments 2"}'
+```
+
+- Run all in parallel 
+    - `tasks/prepare_sample_experiments.sh | parallel -j2`
+
+
+
 - Use Weight and Bias experiment tracking tool 
     - Run : `wandb init`
     
@@ -104,6 +122,8 @@ wandb: Syncing run flowing-waterfall-1
 - Run multiple experiment 
 - Automatically run multiple experiments
 - Config sweeps 
+
+
 
 
 
