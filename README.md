@@ -11,6 +11,10 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 - We will deploy the prediction system as a serverless function to Amazon Lambda.
 - Lastly, we will set up monitoring that alerts us when the incoming data distribution changes.
 
+## Dataset used in this project 
+- https://fki.tic.heia-fr.ch/databases/iam-handwriting-database
+
+
 ## ML model train documentation
 - Started with base model MLP/CNN 
 - Run LeNet model on subsampling dataset

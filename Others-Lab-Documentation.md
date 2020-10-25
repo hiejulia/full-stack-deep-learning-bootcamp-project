@@ -1,7 +1,3 @@
-Our approach will be to train a model that, when given an image containing lines of text, returns a pixelwise labeling of that image, with each pixel belonging to either background, odd line of handwriting, or even line of handwriting.
-Given the output of the model, we can find line regions with an easy image processing operation.
-
-
 
 # Lab 4
 ### Automatically running multiple experiments
@@ -47,3 +43,8 @@ If you choose the **random** sweep strategy, the agent will run forever. Our **g
 - Play around with learning rate. In order to launch experiments with different learning rates, you will have to implement something in `training/run_experiment.py` and `text_recognizer/datasets/base.py`
 - Wrap the LSTM in a Bidirectional() wrapper, which will have two LSTMs read the input forward and backward and concatenate the outputs
 - Not using a sliding window: instead of sliding a LeNet over, you could just run the input through a few conv/pool layers, squeeze out the last (channel) dimension (which should be 0), and input the result into the LSTM. You can play around with the parameters there.
+
+
+
+
+# Lab5 

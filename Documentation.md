@@ -126,8 +126,15 @@ wandb: Syncing run flowing-waterfall-1
 
 
 
-
 # Lab 5: Line Predictor : Detect line regions in an image of a whole param of text 
+- Train model that input image containing lines of text, output pixelwise labeling of that image , 
+each pixel belonging to either background, odd line of handwriting, even line of handwriting.
+- Output of model -> find line regions -> image processing operation
+- Dataset : IAM (lines + original sample forms, with annotate each line and word region)
+
+- Run to load IAM dataset : `python text_recognizer/datasets/iam_dataset.py`
+-> `~/fsdl-text-recognizer-project/data/raw/iam/iamdb/forms` (raw data file)
+
 
 - Training data augmentation
 - Ensemble 2 models 
