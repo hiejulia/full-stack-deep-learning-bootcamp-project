@@ -30,7 +30,7 @@ Project developed during lab sessions of the [Full Stack Deep Learning Bootcamp]
 - Deploy model 
 
 ## My weight & bias metrics 
-- `https://wandb.ai/fsdl/fsdl-text-recognizer-nov2019?workspace=user-hiennguyen`
+- https://wandb.ai/fsdl/fsdl-text-recognizer-nov2019?workspace=user-hiennguyen
 
 
 
